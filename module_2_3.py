@@ -1,30 +1,11 @@
-# Задача: Напишите программу, которая запрашивает у пользователя числа до тех пор, пока не будет введено число 0. Затем программа должна вывести сумму всех введенных чисел
-#while 1 > 0:
-  #  numbers = int(input('Введите число '))
-   # if numbers % 2 == 0:
-   #     print('Число четное')
-   # else:
-   #     print('Число нечетное')
-   #     break
-#print('End')
-
-# Задача: Напишите программу, которая запрашивает
-# у пользователя числа до тех пор, пока не будет введено число 0.
-# Затем программа должна вывести сумму всех введенных чисел
-i = 0
-while True:
-    numbers = int(input('Введите число '))
-    if numbers != i:
-else:
-        i += numbers
-        print(i)
+my_list = [42, 69, 0, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
+num1 = 0
+while num1 < len(my_list):
+    if my_list[num1] < 0:
         break
-print('End')
-
-total = 0
-number = int(input("Введите число (0 для выхода): "))
-while number != 0:
-    total += number
-    number = int(input("Введите число (0 для выхода): "))
-
-print("Сумма чисел:", total)
+    elif my_list[num1] == 0:
+        num1 += 1
+        continue
+    else:
+        print(my_list[num1])
+        num1 += 1
