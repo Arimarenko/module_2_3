@@ -7,7 +7,6 @@ def create_password(n):
         for j in range(i, 21):
 
             if (i + j) % n == 0:
-                # Если делится, добавляем пару в список
                 pairs.append(str(i) + str(j))
 
     result = ''.join(pairs)
