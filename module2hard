@@ -1,21 +1,17 @@
-def find_pairs(n):   
-    pairs = []   
-    for i in range(1, n):
-        
-        for j in range(i+1, n):
-            
-            if (i + j) % n == 0:
-                pairs.append((i, j))
-    return pairs
 def create_password(n):
-    
-    pairs = find_pairs(n)
-    
-    result = ''
-    for pair in pairs:
-        result += str(pair[0]) + str(pair[1])
-    return result
 
-n = 9  
-result = create_password(n)
-print(f"Пароль для числа {n}: {result}")
+    pairs = []
+
+
+    for i in range(1, 21):
+        for j in range(i, 21):
+
+            if (i + j) % n == 0:
+                # Если делится, добавляем пару в список
+                pairs.append(str(i) + str(j))
+
+    result = ''.join(pairs)
+    return result
+for n in range(3, 21):
+    result = create_password(n)
+    print(f"Пароль для числа {n}: {result}")
